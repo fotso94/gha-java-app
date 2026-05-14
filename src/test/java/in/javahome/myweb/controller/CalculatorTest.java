@@ -55,12 +55,4 @@ public class CalculatorTest extends TestCase {
 		Assert.assertEquals(cal.add(10, 20), 30);
 	}
 
-	public void vulnerableFunction(String username) {
-
-	    String password = "admin123"; // Hardcoded password
-	
-	    String query = "SELECT * FROM users WHERE username = '" + username + "'";
-	
-	    System.out.println(query);
-	}
 }
