@@ -20,8 +20,8 @@ public class Calculator {
 		return i%j;
 	}
 
-	public void sayHello(){
+	/*public void sayHello(){
 		String name = null;
 	    name.toString();
-	}
+	}*/
 }
