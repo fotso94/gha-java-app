@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: java-app
-          image: kammana/gha-java-app:7191736
+          image: fotso92/gha-java-app:212909b
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080
