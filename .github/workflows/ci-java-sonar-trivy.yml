@@ -1,4 +1,4 @@
-name: CI Java App using Sonar, Trivy & Docker TT2
+name: CI Java App using Sonar, Trivy & Docker TT
 
 on:
   push:
