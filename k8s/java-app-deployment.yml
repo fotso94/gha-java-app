@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: java-app
-          image: fotso92/gha-java-app:1365f69
+          image: fotso92/gha-java-app:8999712
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080
