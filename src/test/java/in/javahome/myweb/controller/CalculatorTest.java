@@ -54,4 +54,9 @@ public class CalculatorTest extends TestCase {
 	public void testAddNew() {
 		Assert.assertEquals(cal.add(10, 20), 30);
 	}
+
+	public void sayHello(){
+		String name = null;
+		name.toString();
+	}
 }
