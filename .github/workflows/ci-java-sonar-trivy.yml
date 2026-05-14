@@ -1,4 +1,4 @@
-name: CI Java App using Sonar, Trivy & Docker TT
+name: CI Java App using Sonar, Trivy & Docker TT2
 
 on:
   push:
@@ -23,6 +23,14 @@ jobs:
 
       - name: Perform Static Code Analysis
         run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=Java-App-GHA
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+	  - name: Fail if Quality Gate Fails
+        uses: sonarsource/sonarqube-quality-gate-action@v1
+        timeout-minutes: 5
+        with:
+          scanMetadataReportFile: target/sonar/report-task.txt
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
