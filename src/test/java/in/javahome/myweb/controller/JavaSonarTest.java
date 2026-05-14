@@ -23,6 +23,5 @@ public class JavaSonarTest {
         System.out.println("duplicate");
         System.out.println("duplicate");
     }
-}
 
 }
